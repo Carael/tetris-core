@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using TetrisCore.Engine;
 
 namespace TetrisCore
 {
@@ -7,7 +8,9 @@ namespace TetrisCore
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello Maja");
+            var gameEngine = new GameEngine();
+
+            await gameEngine.StartAsync(default);
         }
     }
 }
